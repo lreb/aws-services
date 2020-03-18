@@ -22,19 +22,21 @@ export class RestService {
     }
 
   // Http Headers
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  }
+  // httpOptions = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type': 'application/json'
+  //   })
+  // }
 
-  public get<T>(url): Observable<T> {
+    public get<T>(url): Observable<T> {
         return this.http.get<T>(this.getFullUrl(url))
         .pipe(
             map(res => {
+              console.log(res);
             return res;
         }),
         catchError(err => {
+          console.log(err);
             return throwError(this.errorHandl(err));
          })
         );
@@ -46,7 +48,7 @@ export class RestService {
   //     retry(1),
   //     catchError(this.errorHandl)
   //   )
-  // }  
+  // }
 
   // // GET
   // GetIssue(id): Observable<Bug> {

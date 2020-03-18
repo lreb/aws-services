@@ -32,7 +32,11 @@ namespace AWSServerlessDemo1
                 options.AddPolicy(AllowSpecificOrigins,
                 builder =>
                 {
-                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                    builder
+                    //.AllowAnyOrigin()
+                    .WithOrigins("https://d3gq6iiixnijn1.cloudfront.net") //,"http://localhost:4200")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
                 });
             });
 

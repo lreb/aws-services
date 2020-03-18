@@ -76,6 +76,11 @@
 
 ## WAF
 
+1. Create new one
+2. Type: CloudFront distribution
+3. Select last Cloud Front service
+4. Add rules
+
 ## Sources
 [AWS Policy Generator](https://awspolicygen.s3.amazonaws.com/policygen.html)
 [Allow access to CloudFront S3 bucket from another account](https://forums.aws.amazon.com/thread.jspa?threadID=229908)
